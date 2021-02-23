@@ -4,6 +4,7 @@ public class App {
         printarVetor("Vetor Inicial",vetor);
         printarVetor("Ordenacao Insert Sort",insertSort(vetor));
         printarVetor("Ordenacao Select Sort",selectSort(vetor));
+        printarVetor("Ordenacao Bubble Sort",bubbleSort(vetor));
     }
     public static int[] insertSort(int vetor[]){
         int i, j, key;
@@ -30,6 +31,19 @@ public class App {
             min = vetor[aux];
             vetor[aux] = vetor[i];
             vetor[i] = min;
+        }
+        return vetor;
+    }
+    public static int[] bubbleSort(int vetor[]){
+        int aux;
+        for (int i = 0; i < vetor.length; i++) {
+            for (int j = 0; j < vetor.length-1; j++) {
+                if(vetor[j] > vetor[j+1]){
+                    aux = vetor[j];
+                    vetor[j] = vetor[j +1];
+                    vetor[j+1]= aux;
+                }
+            }
         }
         return vetor;
     }
