@@ -1,6 +1,6 @@
-## Getting Started
+## 2021/1:CIN7005:GO1301 - ALGORITMOS E ESTRUTURA DE DADOS II
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Implementaçāo dos algoritmos de ordenacacao em java
 
 ## Folder Structure
 
