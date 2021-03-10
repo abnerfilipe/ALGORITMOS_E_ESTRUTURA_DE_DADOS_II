@@ -14,30 +14,30 @@ public class QuickSort {
      * @author Hagamenon Oliveira <haganicolau@gmail.com>
      * @return int [] - vetor ordenado
      */
-//    private static int[] sort(int[] v, int inicio, int fim) {
-//
-//        int i = inicio;
-//        int j = fim;
-//        int pivo = v[(inicio + fim)/2];
-//
-//        while(i <= j) {
-//            if(v[i] < pivo) i++;
-//            else if(v[j] > pivo) j--;
-//            else if(i <= j) {
-//                trocar(v,i,j);
-//                i++;
-//                j--;
-//            }
-//        }
-//
-//        if(inicio < j)
-//            sort(v, inicio, j);
-//
-//        if(i < fim)
-//            sort(v, i, fim);
-//
-//        return i;
-//    }
+   private static int[] sort(int[] v, int inicio, int fim) {
+
+       int i = inicio;
+       int j = fim;
+       int pivo = v[(inicio + fim)/2];
+
+       while(i <= j) {
+           if(v[i] < pivo) i++;
+           else if(v[j] > pivo) j--;
+           else if(i <= j) {
+               trocar(v,i,j);
+               i++;
+               j--;
+           }
+       }
+
+       if(inicio < j)
+           sort(v, inicio, j);
+
+       if(i < fim)
+           sort(v, i, fim);
+
+       return v;
+   }
 
     private static void trocar(int[] v, int i, int j) {
         int aux = v[i];

@@ -10,13 +10,15 @@ public class App {
         int tamanho3 = 1000000;
         // 10.000.000
         int tamanho4 = 10000000;
-        // 100.000.000.
+        // 100.000.000
         int tamanho5 = 100000000;
 
         int vetorCrescente[] = geradorVetor.crescente(tamanho3);
         int vetorDecrescente[] = geradorVetor.Decrescente(tamanho3);
         int vetorAleatorio[] = geradorVetor.randon(tamanho3);
 
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("Insert Sort");
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("vetor crescente | Tamanho: "+vetorCrescente.length);
         InsertionSort.sort(vetorCrescente);
