@@ -18,8 +18,8 @@ public class InsertionSort {
         int j;
         int key;
         int i;
-        int troca = 0;
-        int comparacao = 0;
+        long troca = 0;
+        long comparacao = 0;
 
         for (j = 1; j < vetor.length; j++) {
           key = vetor[j];

@@ -7,26 +7,30 @@ import java.util.Arrays;
  * @author Hagamenon.Oliveira<haganicolau@gmail.com>
  */
 public class QuickSort {
-    
-    /**
-     * @description Método recursivo, que a partir de um pivô vai quebrando o array
-     * criando uma complexidade O(logn)
-     * @author Hagamenon Oliveira <haganicolau@gmail.com>
-     * @return int [] - vetor ordenado
-     */
-   private static int[] sort(int[] v, int inicio, int fim) {
-
+   public static int[] sort(int[] v, int inicio, int fim) {
+       long troca =+ 0;
+       long comparacao =+ 0;
        int i = inicio;
        int j = fim;
        int pivo = v[(inicio + fim)/2];
 
        while(i <= j) {
-           if(v[i] < pivo) i++;
-           else if(v[j] > pivo) j--;
-           else if(i <= j) {
-               trocar(v,i,j);
+           comparacao++;
+           if(v[i] < pivo){
                i++;
-               j--;
+           }else{
+               comparacao++;
+               if(v[j] > pivo){
+                   j--;
+               }else {
+                   comparacao++;
+                   if(i <= j) {
+                       troca++;
+                       trocar(v,i,j);
+                       i++;
+                       j--;
+                   }
+               }
            }
        }
 
@@ -35,7 +39,9 @@ public class QuickSort {
 
        if(i < fim)
            sort(v, i, fim);
-
+       System.out.println("Numero de trocas: "+troca);
+       System.out.println("Numero de comparacoes: "+comparacao);
+//       System.out.println("Tempo total: "+(System.currentTimeMillis() - timeInicio) +" MS");
        return v;
    }
 
