@@ -1,3 +1,5 @@
+package ordenacao;
+
 import java.util.Random;
 
 public class geradorVetor {
