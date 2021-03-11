@@ -1,0 +1,96 @@
+
+tamanho1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+QuickSort
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor crescente | Tamanho: 1000
+Numero de trocas: 511
+Numero de comparacoes: 13569
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Decrescente | Tamanho: 1000
+Numero de trocas: 1010
+Numero de comparacoes: 13578
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Aleatorio | Tamanho: 1000
+Numero de trocas: 2718
+Numero de comparacoes: 19472
+
+tamanho2
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+QuickSort
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor crescente | Tamanho: 10000
+Numero de trocas: 5904
+Numero de comparacoes: 190361
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Decrescente | Tamanho: 10000
+Numero de trocas: 10904
+Numero de comparacoes: 190382
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Aleatorio | Tamanho: 10000
+Numero de trocas: 34657
+Numero de comparacoes: 256074
+
+tamanho3
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+QuickSort
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor crescente | Tamanho: 100000
+Numero de trocas: 65535
+Numero de comparacoes: 2419467
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Decrescente | Tamanho: 100000
+Numero de trocas: 115534
+Numero de comparacoes: 2419490
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Aleatorio | Tamanho: 100000
+Numero de trocas: 423293
+Numero de comparacoes: 3229108
+
+tamanho4
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+QuickSort
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor crescente | Tamanho: 1000000
+Numero de trocas: 524287
+Numero de comparacoes: 28590752
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Decrescente | Tamanho: 1000000
+Numero de trocas: 1024286
+Numero de comparacoes: 28590780
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Aleatorio | Tamanho: 1000000
+Numero de trocas: 5009284
+Numero de comparacoes: 38568270   
+
+tamanho5
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+QuickSort
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor crescente | Tamanho: 10000000
+Numero de trocas: 5805696
+Numero de comparacoes: 339428074
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Decrescente | Tamanho: 10000000
+Numero de trocas: 10805696
+Numero de comparacoes: 339428112
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Aleatorio | Tamanho: 10000000
+Numero de trocas: 57314206
+Numero de comparacoes: 484571117
+
+tamanho6
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+QuickSort
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor crescente | Tamanho: 100000000
+Numero de trocas: 66445568
+Numero de comparacoes: 3916454188
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Decrescente | Tamanho: 100000000
+Numero de trocas: 116445568
+Numero de comparacoes: 3916454228
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+vetor Aleatorio | Tamanho: 100000000
+Numero de trocas: 651901044
+Numero de comparacoes: 5305876881

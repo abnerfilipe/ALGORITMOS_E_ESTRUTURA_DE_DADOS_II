@@ -7,9 +7,10 @@ import java.util.Arrays;
  * @author Hagamenon.Oliveira<haganicolau@gmail.com>
  */
 public class QuickSort {
-   public static int[] sort(int[] v, int inicio, int fim) {
-       long troca =+ 0;
-       long comparacao =+ 0;
+    public long troca;
+    public long comparacao;
+
+   public int[] sort(int[] v, int inicio, int fim) {
        int i = inicio;
        int j = fim;
        int pivo = v[(inicio + fim)/2];
@@ -39,8 +40,7 @@ public class QuickSort {
 
        if(i < fim)
            sort(v, i, fim);
-       System.out.println("Numero de trocas: "+troca);
-       System.out.println("Numero de comparacoes: "+comparacao);
+ 
 //       System.out.println("Tempo total: "+(System.currentTimeMillis() - timeInicio) +" MS");
        return v;
    }
