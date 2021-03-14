@@ -3,40 +3,51 @@ import analise.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int tamanho1 = 1000;
-        int tamanho2 = 10000;
-        int tamanho3 = 100000;
-        int tamanho4 = 1000000;
-        int tamanho5 = 10000000;
-        int tamanho6 = 100000000;
+        // int tamanho1 = 1000;
+        // int tamanho2 = 10000;
+        // int tamanho3 = 100000;
+        // int tamanho4 = 1000000;
+        // int tamanho5 = 10000000;
+        // int tamanho6 = 100000000;
 
-        int opcao = tamanho4;
+        // int opcao = tamanho4;
 
-        QuickSort.execute(GeradorVetor.crescente(opcao), GeradorVetor.Decrescente(opcao), GeradorVetor.Aleatorio(opcao));
-        BubbleSort(GeradorVetor.crescente(opcao), GeradorVetor.Decrescente(opcao), GeradorVetor.Aleatorio(opcao));
-    }
-    public static void BubbleSort(int[] vetorCrescente, int[] vetorDecrescente, int[]vetorAleatorio) {
-        BubbleSort bubbleSort = new BubbleSort();
-        System.out.println("==================================================");
-        System.out.println("BubbleSort");
-        System.out.println("==================================================");
-        System.out.println("\tVetor crescente | Tamanho: "+Metricas.FormatLargeNumber(vetorCrescente.length));
-        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
-        bubbleSort.sort(vetorCrescente);
-        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
-        System.out.println("==================================================");
-        System.out.println("\tVetor Decrescente | Tamanho: "+Metricas.FormatLargeNumber(vetorDecrescente.length));
-        bubbleSort.resetCounters();
-        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
-        bubbleSort.sort(vetorDecrescente);
-        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
-        System.out.println("==================================================");
-        System.out.println("\tVetor Aleatorio | Tamanho: "+ Metricas.FormatLargeNumber(vetorAleatorio.length));
-        bubbleSort.resetCounters();
-        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
-        bubbleSort.sort(vetorAleatorio);
-        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
-        System.out.println("==================================================");
+        int tamanho = 0;
+        switch (4) {
+            case 1:
+            System.out.println("Tamanho 1");
+            tamanho = 1000; 
+                break;
+            case 2:
+            System.out.println("Tamanho 2");
+            tamanho = 10000; 
+                break;
+            case 3:
+            System.out.println("Tamanho 3");
+            tamanho = 100000; 
+                break;
+            case 4:
+            System.out.println("Tamanho 4");
+            tamanho = 1000000; 
+                break;
+            case 5:
+            System.out.println("Tamanho 5");
+            tamanho = 10000000; 
+                break;
+            case 6:
+            System.out.println("Tamanho 6");
+            tamanho = 100000000; 
+                break;
+            default:
+                break;
+        }
+
+        QuickSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
+        BubbleSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
+        InsertionSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
+        SelectionSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
+        ShellSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
+        MergeSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
     }
    
 }
