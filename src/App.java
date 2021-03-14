@@ -3,17 +3,8 @@ import analise.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // int tamanho1 = 1000;
-        // int tamanho2 = 10000;
-        // int tamanho3 = 100000;
-        // int tamanho4 = 1000000;
-        // int tamanho5 = 10000000;
-        // int tamanho6 = 100000000;
-
-        // int opcao = tamanho4;
-
         int tamanho = 0;
-        switch (4) {
+        switch (5) {
             case 1:
             System.out.println("Tamanho 1");
             tamanho = 1000; 
@@ -42,12 +33,12 @@ public class App {
                 break;
         }
 
-        QuickSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
-        BubbleSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
-        InsertionSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
+        // QuickSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
+        // BubbleSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
+        // InsertionSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
         SelectionSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
-        ShellSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
-        MergeSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
+        // ShellSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
+        // MergeSort.execute(GeradorVetor.crescente(tamanho), GeradorVetor.Decrescente(tamanho), GeradorVetor.Aleatorio(tamanho));
     }
    
 }

@@ -20,7 +20,7 @@ public class BubbleSort implements Metricas {
     public static void execute(int[] vetorCrescente, int[] vetorDecrescente, int[]vetorAleatorio) {
         BubbleSort sort = new BubbleSort();
         System.out.println("==================================================");
-        System.out.println("QuickSort"); 
+        System.out.println("BubbleSort"); 
         System.out.println("==================================================");
         System.out.println("\tVetor crescente | Tamanho: "+Metricas.FormatLargeNumber(vetorCrescente.length));
         sort.sort(vetorCrescente);

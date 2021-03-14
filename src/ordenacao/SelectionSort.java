@@ -19,19 +19,22 @@ public class SelectionSort implements Metricas {
     public static void execute(int[] vetorCrescente, int[] vetorDecrescente, int[]vetorAleatorio) {
         SelectionSort sort = new SelectionSort();
         System.out.println("==================================================");
-        System.out.println("QuickSort"); 
+        System.out.println("SelectionSort"); 
         System.out.println("==================================================");
         System.out.println("\tVetor crescente | Tamanho: "+Metricas.FormatLargeNumber(vetorCrescente.length));
+        sort.ShowCounters(sort.troca,sort.comparacao);
         sort.sort(vetorCrescente);
         sort.ShowCounters(sort.troca,sort.comparacao);
         System.out.println("==================================================");
         System.out.println("\tVetor Decrescente | Tamanho: "+Metricas.FormatLargeNumber(vetorDecrescente.length));
         sort.resetCounters();
+        sort.ShowCounters(sort.troca,sort.comparacao);
         sort.sort(vetorDecrescente);
         sort.ShowCounters(sort.troca,sort.comparacao);
         System.out.println("==================================================");
         System.out.println("\tVetor Aleatorio | Tamanho: "+ Metricas.FormatLargeNumber(vetorAleatorio.length));
         sort.resetCounters();
+        sort.ShowCounters(sort.troca,sort.comparacao);
         sort.sort(vetorAleatorio);
         sort.ShowCounters(sort.troca,sort.comparacao);
         System.out.println("==================================================");

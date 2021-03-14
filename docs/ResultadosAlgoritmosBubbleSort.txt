@@ -61,8 +61,29 @@ tamanho3
         Numero de comparacoes: 9.999.900.000
 ==================================================
 tamanho4
-
+==================================================
+BubbleSort
+==================================================
+        Vetor crescente | Tamanho: 1.000.000
+        Numero de trocas: 0
+        Numero de comparacoes: 0
+        Numero de trocas: 0
+        Numero de comparacoes: 999.999.000.000
+==================================================
+        Vetor Decrescente | Tamanho: 1.000.000
+        Numero de trocas: 0
+        Numero de comparacoes: 0
+        Numero de trocas: 499.999.500.000
+        Numero de comparacoes: 999.999.000.000
+==================================================
+        Vetor Aleatorio | Tamanho: 1.000.000
+        Numero de trocas: 0
+        Numero de comparacoes: 0
+        Numero de trocas: 250.099.249.234
+        Numero de comparacoes: 999.999.000.000
+==================================================
 tamanho5
-
+Tempo de Execucao muito alto!
 tamanho6
+Tempo de Execucao muito alto!
 

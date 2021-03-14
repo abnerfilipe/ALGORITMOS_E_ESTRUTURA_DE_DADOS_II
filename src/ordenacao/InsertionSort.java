@@ -17,7 +17,7 @@ public class InsertionSort implements Metricas {
   public static void execute(int[] vetorCrescente, int[] vetorDecrescente, int[] vetorAleatorio) {
     InsertionSort sort = new InsertionSort();
     System.out.println("==================================================");
-    System.out.println("QuickSort");
+    System.out.println("InsertionSort");
     System.out.println("==================================================");
     System.out.println("\tVetor crescente | Tamanho: " + Metricas.FormatLargeNumber(vetorCrescente.length));
     sort.sort(vetorCrescente);

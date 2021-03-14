@@ -23,7 +23,7 @@ public class MergeSort implements Metricas{
       public static void execute(int[] vetorCrescente, int[] vetorDecrescente, int[]vetorAleatorio) {
         MergeSort sort = new MergeSort();
         System.out.println("==================================================");
-        System.out.println("QuickSort"); 
+        System.out.println("MergeSort"); 
         System.out.println("==================================================");
         System.out.println("\tVetor crescente | Tamanho: "+Metricas.FormatLargeNumber(vetorCrescente.length));
         sort.sort(vetorCrescente,0,vetorCrescente.length-1);

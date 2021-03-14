@@ -22,7 +22,7 @@ public class ShellSort implements Metricas{
     public static void execute(int[] vetorCrescente, int[] vetorDecrescente, int[]vetorAleatorio) {
         ShellSort sort = new ShellSort();
         System.out.println("==================================================");
-        System.out.println("QuickSort"); 
+        System.out.println("ShellSort"); 
         System.out.println("==================================================");
         System.out.println("\tVetor crescente | Tamanho: "+Metricas.FormatLargeNumber(vetorCrescente.length));
         sort.sort(vetorCrescente);

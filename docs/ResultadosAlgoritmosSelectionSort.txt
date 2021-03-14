@@ -1,12 +1,65 @@
 
 tamanho1
-
+==================================================
+SelectionSort
+==================================================
+        Vetor crescente | Tamanho: 1.000
+        Numero de trocas: 0
+        Numero de comparacoes: 499.500
+==================================================
+        Vetor Decrescente | Tamanho: 1.000
+        Numero de trocas: 250.000
+        Numero de comparacoes: 499.500
+==================================================
+        Vetor Aleatorio | Tamanho: 1.000
+        Numero de trocas: 5.189
+        Numero de comparacoes: 499.500
+==================================================
 tamanho2
-
+==================================================
+SelectionSort
+==================================================
+        Vetor crescente | Tamanho: 10.000
+        Numero de trocas: 0
+        Numero de comparacoes: 49.995.000
+==================================================
+        Vetor Decrescente | Tamanho: 10.000
+        Numero de trocas: 25.000.000
+        Numero de comparacoes: 49.995.000
+==================================================
+        Vetor Aleatorio | Tamanho: 10.000
+        Numero de trocas: 76.249
+        Numero de comparacoes: 49.995.000
+==================================================
 tamanho3
+==================================================
+SelectionSort
+==================================================
+        Vetor crescente | Tamanho: 100.000
+        Numero de trocas: 0
+        Numero de comparacoes: 4.999.950.000
+==================================================
+        Vetor Decrescente | Tamanho: 100.000
+        Numero de trocas: 2.500.000.000
+        Numero de comparacoes: 4.999.950.000
+==================================================
+        Vetor Aleatorio | Tamanho: 100.000
+        Numero de trocas: 987.287
+        Numero de comparacoes: 4.999.950.000
+Tamanho 4
+==================================================
+        Vetor crescente | Tamanho: 1.000.000
+        Numero de trocas: 0
+        Numero de comparacoes: 499.999.500.000
+==================================================
+        Vetor Decrescente | Tamanho: 1.000.000
 
-tamanho4 
-
+        Numero de trocas: 250.000.000.000
+        Numero de comparacoes: 499.999.500.000
+==================================================
+        Vetor Aleatorio | Tamanho: 1.000.000
+        Numero de trocas: 12.139.092
+        Numero de comparacoes: 499.999.500.000
 tamanho5
 
 tamanho6
