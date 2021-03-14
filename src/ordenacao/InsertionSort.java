@@ -1,39 +1,57 @@
 package ordenacao;
 
-import java.util.Timer;
+import analise.Metricas;
 
-/**
- *
- * @author Hagamenon.Oliveira<haganicolau@gmail.com>
- */
-public class InsertionSort {
+public class InsertionSort implements Metricas {
+  public long troca;
+  public long comparacao;
 
-    /**
-     * @description Método insertion sort O(n^2)
-     * @author Hagamenon Oliveira <haganicolau@gmail.com>
-     * @return void 
-     */
-    public static int[] sort(int[] vetor) { 
-        long timeInicio =  System.currentTimeMillis();
-        int j;
-        int key;
-        int i;
-        long troca = 0;
-        long comparacao = 0;
+  public InsertionSort() {
+    this.troca = 0;
+    this.comparacao = 0;
+  }
+  public void resetCounters() {
+    this.troca = 0;
+    this.comparacao = 0;
+  }
+  public static void execute(int[] vetorCrescente, int[] vetorDecrescente, int[] vetorAleatorio) {
+    InsertionSort sort = new InsertionSort();
+    System.out.println("==================================================");
+    System.out.println("QuickSort");
+    System.out.println("==================================================");
+    System.out.println("\tVetor crescente | Tamanho: " + Metricas.FormatLargeNumber(vetorCrescente.length));
+    sort.sort(vetorCrescente);
+    sort.ShowCounters(sort.troca, sort.comparacao);
+    System.out.println("==================================================");
+    System.out.println("\tVetor Decrescente | Tamanho: " + Metricas.FormatLargeNumber(vetorDecrescente.length));
+    sort.resetCounters();
+    sort.sort(vetorDecrescente);
+    sort.ShowCounters(sort.troca, sort.comparacao);
+    System.out.println("==================================================");
+    System.out.println("\tVetor Aleatorio | Tamanho: " + Metricas.FormatLargeNumber(vetorAleatorio.length));
+    sort.resetCounters();
+    sort.sort(vetorAleatorio);
+    sort.ShowCounters(sort.troca, sort.comparacao);
+    System.out.println("==================================================");
+  }
 
-        for (j = 1; j < vetor.length; j++) {
-          key = vetor[j];
-          comparacao++;
-          for (i = j - 1; (i >= 0) && (vetor[i] > key); i--) {
-            troca++;
-             vetor[i + 1] = vetor[i];
-           }
-            vetor[i + 1] = key;
-        }
-        System.out.println("Numero de trocas: "+troca);
-        System.out.println("Numero de comparacoes: "+comparacao);
-        System.out.println("Tempo total: "+(System.currentTimeMillis() - timeInicio) +" MS");
-        return vetor;
+  public int[] sort(int[] vetor) {
+    int j;
+    int key;
+    int i;
+
+    for (j = 1; j < vetor.length; j++) {
+      key = vetor[j];
+      this.comparacao++;
+      for (i = j - 1;
+        (i >= 0) && (vetor[i] > key); i--) {
+        this.troca++;
+        vetor[i + 1] = vetor[i];
+      }
+      vetor[i + 1] = key;
     }
+
+    return vetor;
+  }
 
 }

@@ -1,27 +1,54 @@
 package ordenacao;
 
-import java.util.Arrays;
-import java.util.Random;
-
+import analise.Metricas;
 
 /**
  *
  * @author Hagamenon.Oliveira<haganicolau@gmail.com>
  */
-public class MergeSort {
-    public static void sort(int vetor[], int inicio, int fim) {
-        long timeInicio =  System.currentTimeMillis();
-        long troca = 0;
-        long comparacao =0;
+public class MergeSort implements Metricas{
+    public long troca;
+    public long comparacao;
+
+    public MergeSort(){
+        this.troca = 0;
+        this.troca = 0;
+    }
+
+    public void resetCounters() {
+        this.troca = 0;
+        this.comparacao = 0;
+      }
+
+      public static void execute(int[] vetorCrescente, int[] vetorDecrescente, int[]vetorAleatorio) {
+        MergeSort sort = new MergeSort();
+        System.out.println("==================================================");
+        System.out.println("QuickSort"); 
+        System.out.println("==================================================");
+        System.out.println("\tVetor crescente | Tamanho: "+Metricas.FormatLargeNumber(vetorCrescente.length));
+        sort.sort(vetorCrescente,0,vetorCrescente.length-1);
+        sort.ShowCounters(sort.troca,sort.comparacao);
+        System.out.println("==================================================");
+        System.out.println("\tVetor Decrescente | Tamanho: "+Metricas.FormatLargeNumber(vetorDecrescente.length));
+        sort.resetCounters();
+        sort.sort(vetorDecrescente,0,vetorDecrescente.length-1);
+        sort.ShowCounters(sort.troca,sort.comparacao);
+        System.out.println("==================================================");
+        System.out.println("\tVetor Aleatorio | Tamanho: "+ Metricas.FormatLargeNumber(vetorAleatorio.length));
+        sort.resetCounters();
+        sort.sort(vetorAleatorio,0,vetorAleatorio.length-1);
+        sort.ShowCounters(sort.troca,sort.comparacao);
+        System.out.println("==================================================");
+    }
+
+    public void sort(int vetor[], int inicio, int fim) {
+      
         if (inicio < fim) {
             int meio = (inicio + fim) / 2;
             sort(vetor, inicio, meio);
             sort(vetor, meio + 1, fim);
-            intercalar(vetor, inicio, meio, fim, troca, comparacao);
+            intercalar(vetor, inicio, meio, fim, this.troca, this.comparacao);
         }
-        System.out.println("Numero de trocas: "+troca);
-        System.out.println("Numero de comparacoes: "+comparacao);
-        System.out.println("Tempo total: "+(System.currentTimeMillis() - timeInicio) +" MS");
     }
 
     public static void intercalar(int vetor[], int inicio, int meio, int fim, long trocaLocal, long comparacaoLocal) {

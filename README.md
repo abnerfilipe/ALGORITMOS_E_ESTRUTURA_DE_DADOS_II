@@ -1,14 +1,11 @@
 ## 2021/1:CIN7005:GO1301 - ALGORITMOS E ESTRUTURA DE DADOS II
 
-Implementaçāo dos algoritmos de ordenacacao em java
+Implementaçāo dos algoritmos dos principais algoritmos de ordenacacao em Java.
+Os metodos de ordenacao sao:
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-## Dependency Management
-
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+1. Insert Sort
+2. Selection Sort
+3. Bubble Sort
+4. Merge Sort 
+5. Quick Sort
+6. Shell Sort

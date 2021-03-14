@@ -2,25 +2,22 @@ package ordenacao;
 
 import analise.Metricas;
 
-/**
- *
- * @author Hagamenon.Oliveira<haganicolau@gmail.com>
- */
-public class ShellSort implements Metricas{
-    public long comparacao;
+public class SelectionSort implements Metricas {
     public long troca;
+    public long comparacao;
 
-    public ShellSort(){
-        this.comparacao = 0;
+
+    public SelectionSort(){
         this.troca = 0;
+        this.comparacao = 0;
     }
-
     public void resetCounters() {
         this.troca = 0;
         this.comparacao = 0;
-      }
+    }
+
     public static void execute(int[] vetorCrescente, int[] vetorDecrescente, int[]vetorAleatorio) {
-        ShellSort sort = new ShellSort();
+        SelectionSort sort = new SelectionSort();
         System.out.println("==================================================");
         System.out.println("QuickSort"); 
         System.out.println("==================================================");
@@ -40,25 +37,33 @@ public class ShellSort implements Metricas{
         System.out.println("==================================================");
     }
 
-      
-    public int[] sort(int[] v) {
-        int h = v.length / 2;
-        int valor, j, i;
+    public int[] sort(int[] vetor) {
+        int i,j,min,aux;
 
-        while(h > 0) {
-            for(i = h; i < v.length; i++) {
-                valor = v[i];
-                j = i;
-                this.comparacao++;
-                while(j >= h && v[j-h] > valor) {
+        for(i = 0; i < vetor.length; i++) {
+            min = i;
+            
+            for(j = i + 1; j < vetor.length; j++) {      
+                this.comparacao++;  
+                if(vetor[j] < vetor[min]) {
                     this.troca++;
-                    v[j] = v[j-h];
-                    j = j-h; 
+                    min = j;
                 }
-                v[j] = valor;
+
             }
-          h = h / 2;  
+            aux = vetor[i];
+            vetor[i] = vetor[min];
+            vetor[min] = aux;
         }
-       return v;
+
+        return vetor;
+    }
+
+    public static void printarVetor(int vetor[]) {
+        System.out.print("vetor [ ");
+        for(int i = 0; i < vetor.length; i++) {
+            System.out.print(vetor[i]+" ");
+        }
+        System.out.print("];");
     }
 }

@@ -2,25 +2,23 @@ package ordenacao;
 
 import analise.Metricas;
 
-/**
- *
- * @author Hagamenon.Oliveira<haganicolau@gmail.com>
- */
-public class ShellSort implements Metricas{
-    public long comparacao;
+public class BubbleSort implements Metricas {
+
     public long troca;
+    public long comparacao;
 
-    public ShellSort(){
-        this.comparacao = 0;
+
+    public BubbleSort(){
         this.troca = 0;
+        this.comparacao = 0;
     }
-
+ 
     public void resetCounters() {
         this.troca = 0;
         this.comparacao = 0;
-      }
+    }
     public static void execute(int[] vetorCrescente, int[] vetorDecrescente, int[]vetorAleatorio) {
-        ShellSort sort = new ShellSort();
+        BubbleSort sort = new BubbleSort();
         System.out.println("==================================================");
         System.out.println("QuickSort"); 
         System.out.println("==================================================");
@@ -39,26 +37,21 @@ public class ShellSort implements Metricas{
         sort.ShowCounters(sort.troca,sort.comparacao);
         System.out.println("==================================================");
     }
+    public int[] sort(int[] vetor) {
+        int i,j,aux;
 
-      
-    public int[] sort(int[] v) {
-        int h = v.length / 2;
-        int valor, j, i;
-
-        while(h > 0) {
-            for(i = h; i < v.length; i++) {
-                valor = v[i];
-                j = i;
+        for(j = 0; j < vetor.length; j++) {
+            for(i = 0; i < vetor.length - 1; i++) {
                 this.comparacao++;
-                while(j >= h && v[j-h] > valor) {
+                if(vetor[i] > vetor[i + 1]) {
                     this.troca++;
-                    v[j] = v[j-h];
-                    j = j-h; 
+                    aux = vetor[i];
+                    vetor[i] = vetor[i + 1];
+                    vetor[i + 1] = aux;
                 }
-                v[j] = valor;
             }
-          h = h / 2;  
         }
-       return v;
+        return vetor;
     }
+
 }

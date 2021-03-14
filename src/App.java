@@ -1,67 +1,42 @@
 import ordenacao.*;
+import analise.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // 1000
         int tamanho1 = 1000;
-        // 10.000
         int tamanho2 = 10000;
-        // 100.000
         int tamanho3 = 100000;
-        // 1.000.000
         int tamanho4 = 1000000;
-        // 10.000.000
         int tamanho5 = 10000000;
-        // 100.000.000
         int tamanho6 = 100000000;
 
-        int vetorCrescente[] = geradorVetor.crescente(tamanho6);
-        int vetorDecrescente[] = geradorVetor.Decrescente(tamanho6);
-        int vetorAleatorio[] = geradorVetor.randon(tamanho6);
+        int opcao = tamanho4;
 
-//        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-//        System.out.println("Insert Sort");
-//        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-//        System.out.println("vetor crescente | Tamanho: "+vetorCrescente.length);
-//        InsertionSort.sort(vetorCrescente);
-//        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-//        System.out.println("vetor Decrescente | Tamanho: "+vetorCrescente.length);
-//        InsertionSort.sort(vetorDecrescente);
-//        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-//        System.out.println("vetor Aleatorio | Tamanho: "+vetorCrescente.length);
-//        InsertionSort.sort(vetorAleatorio);
-
-//        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-//        System.out.println("ShellSort");
-//        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-//        System.out.println("vetor crescente | Tamanho: "+vetorCrescente.length);
-//        ShellSort.sort(vetorCrescente);
-//        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-//        System.out.println("vetor Decrescente | Tamanho: "+vetorCrescente.length);
-//        ShellSort.sort(vetorDecrescente);
-//        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-//        System.out.println("vetor Aleatorio | Tamanho: "+vetorCrescente.length);
-//        ShellSort.sort(vetorAleatorio); 
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        System.out.println("QuickSort");
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        System.out.println("vetor crescente | Tamanho: "+vetorCrescente.length);
-        QuickSort quickSort1 = new QuickSort();
-        quickSort1.sort(vetorCrescente,0,vetorCrescente.length-1);
-        System.out.println("Numero de trocas: "+quickSort1.troca);
-        System.out.println("Numero de comparacoes: "+quickSort1.comparacao);
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        System.out.println("vetor Decrescente | Tamanho: "+vetorDecrescente.length);
-        QuickSort quickSort2 = new QuickSort();
-        quickSort2.sort(vetorDecrescente,0,vetorDecrescente.length-1);
-        System.out.println("Numero de trocas: "+quickSort2.troca);
-        System.out.println("Numero de comparacoes: "+quickSort2.comparacao);
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        System.out.println("vetor Aleatorio | Tamanho: "+vetorAleatorio.length);
-        QuickSort quickSort3 = new QuickSort();
-        quickSort3.sort(vetorAleatorio,0,vetorAleatorio.length-1);
-        System.out.println("Numero de trocas: "+quickSort3.troca);
-        System.out.println("Numero de comparacoes: "+quickSort3.comparacao);
+        QuickSort.execute(GeradorVetor.crescente(opcao), GeradorVetor.Decrescente(opcao), GeradorVetor.Aleatorio(opcao));
+        BubbleSort(GeradorVetor.crescente(opcao), GeradorVetor.Decrescente(opcao), GeradorVetor.Aleatorio(opcao));
+    }
+    public static void BubbleSort(int[] vetorCrescente, int[] vetorDecrescente, int[]vetorAleatorio) {
+        BubbleSort bubbleSort = new BubbleSort();
+        System.out.println("==================================================");
+        System.out.println("BubbleSort");
+        System.out.println("==================================================");
+        System.out.println("\tVetor crescente | Tamanho: "+Metricas.FormatLargeNumber(vetorCrescente.length));
+        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
+        bubbleSort.sort(vetorCrescente);
+        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
+        System.out.println("==================================================");
+        System.out.println("\tVetor Decrescente | Tamanho: "+Metricas.FormatLargeNumber(vetorDecrescente.length));
+        bubbleSort.resetCounters();
+        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
+        bubbleSort.sort(vetorDecrescente);
+        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
+        System.out.println("==================================================");
+        System.out.println("\tVetor Aleatorio | Tamanho: "+ Metricas.FormatLargeNumber(vetorAleatorio.length));
+        bubbleSort.resetCounters();
+        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
+        bubbleSort.sort(vetorAleatorio);
+        bubbleSort.ShowCounters(bubbleSort.troca,bubbleSort.comparacao);
+        System.out.println("==================================================");
     }
    
 }

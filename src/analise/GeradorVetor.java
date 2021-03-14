@@ -1,8 +1,9 @@
-package ordenacao;
-
+package analise;
 import java.util.Random;
 
-public class geradorVetor {
+public class GeradorVetor {
+
+
     public static int[] crescente(int tamanho) {
 
         int vetorCrescente[] = new int[tamanho];
@@ -19,7 +20,7 @@ public class geradorVetor {
         }
         return vetorDecrescente;
     }
-    public static int[] randon(int tamanho) {
+    public static int[] Aleatorio(int tamanho) {
         Random gerador = new Random();
         int vetorRandomico[] = new int[tamanho];
         for (int i = 0; i < vetorRandomico.length; i++) {
@@ -27,4 +28,5 @@ public class geradorVetor {
         }
         return vetorRandomico;
     }
+
 }

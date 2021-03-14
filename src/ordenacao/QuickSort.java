@@ -1,32 +1,63 @@
 package ordenacao;
 
-import java.util.Arrays;
+import analise.Metricas;
 
 /**
  *
  * @author Hagamenon.Oliveira<haganicolau@gmail.com>
  */
-public class QuickSort {
+public class QuickSort implements Metricas {
     public long troca;
     public long comparacao;
 
-   public int[] sort(int[] v, int inicio, int fim) {
+
+    public QuickSort(){
+        this.troca = 0;
+        this.comparacao = 0;
+    }
+ 
+    public void resetCounters() {
+        this.troca = 0;
+        this.comparacao = 0;
+    }
+    public static void execute(int[] vetorCrescente, int[] vetorDecrescente, int[]vetorAleatorio) {
+        QuickSort quickSort = new QuickSort();
+        System.out.println("==================================================");
+        System.out.println("QuickSort"); 
+        System.out.println("==================================================");
+        System.out.println("\tVetor crescente | Tamanho: "+Metricas.FormatLargeNumber(vetorCrescente.length));
+        quickSort.sort(vetorCrescente,0,vetorCrescente.length-1);
+        quickSort.ShowCounters(quickSort.troca,quickSort.comparacao);
+        System.out.println("==================================================");
+        System.out.println("\tVetor Decrescente | Tamanho: "+Metricas.FormatLargeNumber(vetorDecrescente.length));
+        quickSort.resetCounters();
+        quickSort.sort(vetorDecrescente,0,vetorDecrescente.length-1);
+        quickSort.ShowCounters(quickSort.troca,quickSort.comparacao);
+        System.out.println("==================================================");
+        System.out.println("\tVetor Aleatorio | Tamanho: "+ Metricas.FormatLargeNumber(vetorAleatorio.length));
+        quickSort.resetCounters();
+        quickSort.sort(vetorAleatorio,0,vetorAleatorio.length-1);
+        quickSort.ShowCounters(quickSort.troca,quickSort.comparacao);
+        System.out.println("==================================================");
+    }
+
+    public int[] sort(int[] v, int inicio, int fim) {
        int i = inicio;
        int j = fim;
        int pivo = v[(inicio + fim)/2];
 
        while(i <= j) {
-           comparacao++;
+           this.comparacao++;
            if(v[i] < pivo){
                i++;
            }else{
-               comparacao++;
+               this.comparacao++;
                if(v[j] > pivo){
                    j--;
                }else {
-                   comparacao++;
+                   this.comparacao++;
                    if(i <= j) {
-                       troca++;
+                       this.troca++;
                        trocar(v,i,j);
                        i++;
                        j--;
