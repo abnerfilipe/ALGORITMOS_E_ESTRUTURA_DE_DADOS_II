@@ -4,65 +4,53 @@ tamanho1
 vetor crescente | Tamanho: 1000
 Numero de trocas: 0
 Numero de comparacoes: 999
-Tempo total: 4 MS
 ==================================================
 vetor Decrescente | Tamanho: 1000
 Numero de trocas: 499500
 Numero de comparacoes: 999
-Tempo total: 31 MS
 ==================================================
 vetor Aleatorio | Tamanho: 1000
 Numero de trocas: 253018
 Numero de comparacoes: 999
-Tempo total: 50 MS
 
 tamanho2
 ==================================================
 vetor crescente | Tamanho: 10000
 Numero de trocas: 0
 Numero de comparacoes: 9999
-Tempo total: 2 MS
 ==================================================
 vetor Decrescente | Tamanho: 10000
 Numero de trocas: 49995000
 Numero de comparacoes: 9999
-Tempo total: 92 MS
 ==================================================
 vetor Aleatorio | Tamanho: 10000
 Numero de trocas: 24948882
 Numero de comparacoes: 9999
-Tempo total: 89 MS
 
 tamanho3
 ==================================================
 vetor crescente | Tamanho: 100000
 Numero de trocas: 0
 Numero de comparacoes: 99999
-Tempo total: 51 MS
 ==================================================
 vetor Decrescente | Tamanho: 100000
 Numero de trocas: 4999950000
 Numero de comparacoes: 99999
-Tempo total: 8817 MS
 ==================================================
 vetor Aleatorio | Tamanho: 100000
 Numero de trocas: 2501608598
 Numero de comparacoes: 99999
-Tempo total: 1729 MS
 
 tamanho4
 ==================================================
 vetor crescente | Tamanho: 1000000
 Numero de trocas: 0
 Numero de comparacoes: 999999
-Tempo total: 15 MS
 ==================================================
 vetor Decrescente | Tamanho: 1000000
 Numero de trocas: 499999500000
 Numero de comparacoes: 999999
-Tempo total: 1138025 MS
 ==================================================
 vetor Aleatorio | Tamanho: 1000000
 Numero de trocas: 250161484478
 Numero de comparacoes: 999999
-Tempo total: 128912 MS       
