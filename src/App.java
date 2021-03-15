@@ -21,7 +21,7 @@ public class App {
             System.out.println("Tamanho 4");
             tamanho = 1000000; 
                 break;
-            case 5
+            case 5:
             System.out.println("Tamanho 5");
             tamanho = 10000000; 
                 break;

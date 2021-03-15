@@ -67,7 +67,28 @@ MergeSort
         Numero de comparacoes: 4.819.264
 ==================================================
 
-tamanho4 
+Tamanho 4
+==================================================
+MergeSort
+==================================================
+        Vetor crescente | Tamanho: 1.000.000
+        Numero de trocas: 0
+        Numero de comparacoes: 0
+        Numero de trocas: 19.951.424
+        Numero de comparacoes: 40.084.288
+==================================================
+        Vetor Decrescente | Tamanho: 1.000.000
+        Numero de trocas: 0
+        Numero de comparacoes: 0
+        Numero de trocas: 10.066.432
+        Numero de comparacoes: 49.787.840
+==================================================
+        Vetor Aleatorio | Tamanho: 1.000.000
+        Numero de trocas: 0
+        Numero de comparacoes: 0
+        Numero de trocas: 10.672.690
+        Numero de comparacoes: 57.971.104
+==================================================
 
 tamanho5
 
