@@ -26,21 +26,29 @@ public class MergeSort implements Metricas{
         System.out.println("MergeSort"); 
         System.out.println("==================================================");
         System.out.println("\tVetor crescente | Tamanho: "+Metricas.FormatLargeNumber(vetorCrescente.length));
+        sort.ShowCounters(sort.troca,sort.comparacao);
         sort.sort(vetorCrescente,0,vetorCrescente.length-1);
         sort.ShowCounters(sort.troca,sort.comparacao);
         System.out.println("==================================================");
         System.out.println("\tVetor Decrescente | Tamanho: "+Metricas.FormatLargeNumber(vetorDecrescente.length));
         sort.resetCounters();
+        sort.ShowCounters(sort.troca,sort.comparacao);
         sort.sort(vetorDecrescente,0,vetorDecrescente.length-1);
         sort.ShowCounters(sort.troca,sort.comparacao);
         System.out.println("==================================================");
         System.out.println("\tVetor Aleatorio | Tamanho: "+ Metricas.FormatLargeNumber(vetorAleatorio.length));
         sort.resetCounters();
+        sort.ShowCounters(sort.troca,sort.comparacao);
         sort.sort(vetorAleatorio,0,vetorAleatorio.length-1);
         sort.ShowCounters(sort.troca,sort.comparacao);
         System.out.println("==================================================");
     }
-
+    public void addTroca(long value) {
+        this.troca = value;
+    }
+    public void addComparacao(long value) {
+        this.comparacao = value;
+    }
     public void sort(int vetor[], int inicio, int fim) {
       
         if (inicio < fim) {
@@ -51,8 +59,8 @@ public class MergeSort implements Metricas{
         }
     }
 
-    public static void intercalar(int vetor[], int inicio, int meio, int fim, long trocaLocal, long comparacaoLocal) {
 
+    public void intercalar(int vetor[], int inicio, int meio, int fim, long trocaLocal, long comparacaoLocal) {
         int secundario[] = new int[vetor.length];
         /*cópia do vetor*/
         for (int k = inicio; k <= fim; k++){
@@ -66,28 +74,24 @@ public class MergeSort implements Metricas{
             if(indiceEsquerdo > meio) {
                 trocaLocal++;
                 vetor[k] = secundario[indiceDireito++];
+            }else{
+                comparacaoLocal++;
+                if(indiceDireito > fim){
+                    trocaLocal++;
+                    vetor[k] = secundario[indiceEsquerdo++];
+                }else{
+                    comparacaoLocal++;
+                    if(secundario[indiceEsquerdo]<secundario[indiceDireito]){
+                        trocaLocal++;
+                        vetor[k] = secundario[indiceEsquerdo++];
+                    }else {
+                        vetor[k] = secundario[indiceDireito++];
+                    };
+                }
             }
-            else if(indiceDireito > fim){
-                trocaLocal++;
-                vetor[k] = secundario[indiceEsquerdo++];
-            }
-            else if(secundario[indiceEsquerdo]<secundario[indiceDireito]){
-                trocaLocal++;
-                vetor[k] = secundario[indiceEsquerdo++];
-            }
-            else {
-                trocaLocal++;
-                vetor[k] = secundario[indiceDireito++];
-            };
         }
-    }
-    public static void printarVetor(long vetor[]) {
-        System.out.print("vetor [");  
-        for (long i : vetor) {
-            System.out.print(i + " ");
-        }
-        System.out.print("]");  
-        System.out.println();
+        this.troca = trocaLocal;
+        this.comparacao = comparacaoLocal;
     }
 
 }
